@@ -1,0 +1,14 @@
+header {
+    background-color: #412386;
+}
+
+.container {
+    display: flex;
+    align-items: center;  
+    height: 60px;
+}
+h4{
+    color: aliceblue;
+    font-weight: normal;
+  }
+  
