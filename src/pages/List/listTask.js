@@ -6,6 +6,7 @@ import axios from 'axios';
 function ListTask() {
     const [tasks, setTasks] = useState([]);
     const [filter, setFilter] = useState('pending'); // Inicia com um filtro padrão 
+    const [loading, setLoading] = useState(true); // Estado de carregamento
 
     const filteredTasks = tasks.filter(task => {
         if (filter === 'all') {
@@ -25,6 +26,7 @@ function ListTask() {
         axios.get("https://listify-api-bg9i.onrender.com/tasks")
             .then((response) => {
                 setTasks(response.data);
+                setLoading(false); // Define o estado de carregamento como false quando os dados forem carregados
             })
             .catch(() => {
                 console.log("Deu errado.");
@@ -54,37 +56,41 @@ function ListTask() {
                         <option value="in-progress">Em andamento</option>
                     </select>
                 </div>
-                <div className='cards-tasks'>
-                    {filteredTasks.map((task, key) => {
-                        return (
-                            <div className='card-task-item' key={key}>
-                                <header>
-                                    <h2>{task.name}</h2>
-                                </header>
-
-                                <div className='description-task'>
-                                    <p>{task.description}</p>
+                {loading ? (
+                    <div className="loading-indicator">Carregando...</div>
+                ) : (
+                    <div className='cards-tasks'>
+                        {filteredTasks.map((task, key) => {
+                            return (
+                                <div className='card-task-item' key={key}>
+                                    <header>
+                                        <h2>{task.name}</h2>
+                                    </header>
+    
+                                    <div className='description-task'>
+                                        <p>{task.description}</p>
+                                    </div>
+    
+                                    <div className='btns'>
+                                        <div className='btn-editTask'>
+                                            <button onClick={() => window.location.href = `/editTask/${task._id}`}>Editar</button>
+                                        </div>
+    
+                                        <div className='btn-detailsTask'>
+                                            <button onClick={() => window.location.href = `/detailsTask/${task._id}`}>Detalhes</button>
+                                        </div>
+                                        
+                                        <div className='btn-deleteTask'>
+                                            <button onClick={() => deleteTask(task._id)}>Excluir</button>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div className='btns'>
-                                    <div className='btn-editTask'>
-                                        <button onClick={() => window.location.href = `/editTask/${task._id}`}>Editar</button>
-                                    </div>
-
-                                    <div className='btn-detailsTask'>
-                                        <button onClick={() => window.location.href = `/detailsTask/${task._id}`}>Detalhes</button>
-                                    </div>
-                                    
-                                    <div className='btn-deleteTask'>
-                                        <button onClick={() => deleteTask(task._id)}>Excluir</button>
-                                    </div>
-                                </div>
-                            </div>
-                        );
-                    })}
-                </div>
+                            );
+                        })}
+                    </div>
+                )}
             </main>
         </div>
     );
-}
+}    
 export default ListTask;
