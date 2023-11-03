@@ -5,7 +5,7 @@ import axios from 'axios';
 
 function ListTask() {
     const [tasks, setTasks] = useState([]);
-    const [filter, setFilter] = useState('all'); // Inicia com um filtro padrão 
+    const [filter, setFilter] = useState('pending'); // Inicia com um filtro padrão 
 
     const filteredTasks = tasks.filter(task => {
         if (filter === 'all') {
