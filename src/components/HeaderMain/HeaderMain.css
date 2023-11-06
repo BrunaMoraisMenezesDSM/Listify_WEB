@@ -1,14 +1,26 @@
-header {
-    background-color: #412386;
+header[name='header-main'] {
+    background-color: #FFA500;
+    padding-top: 20px;
 }
 
-.container {
-    display: flex;
-    align-items: center;  
-    height: 60px;
+.container-main {
+    align-items: center;
+    height: 100px;
 }
-h4{
+
+h4 {
     color: aliceblue;
     font-weight: normal;
-  }
-  
+    font-style: italic;
+    text-align: center;
+    font-family: 'Candara';
+    font-size: small;
+}
+
+h1 {
+    font-family: 'Candara';
+    font-size: 60px;
+    text-align: center;
+    color: white;
+    margin-top: 0px;
+}
