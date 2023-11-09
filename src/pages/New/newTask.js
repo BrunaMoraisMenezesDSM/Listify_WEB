@@ -7,21 +7,21 @@ import Header from '../../components/Header/Header';
 import '../../styles/global.css'
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+ 
 // Redirecionamento para a lista de tarefas
 const ReloadToList = () => {
     window.location.href = '/';
 };
-
+ 
 // Esquema de validação - Yup
 const validationNewTask = yup.object().shape({
-    name: yup.string().required("O nome da tarefa é obrigatório").max(40, "O nome precisa ter menos de 60 caracteres"),
-    description: yup.string().required("A descrição é obrigatória").max(40, "A descrição precisa ter menos de 40 caracteres"),
-    priority: yup.string().required("A prioridade é obrigatória"),
-    status: yup.string().required("O status da tarefa é obrigatório"),
-    dateLimit: yup.string().required("A data limite é obrigatória")
+    name: yup.string().required("O nome da tarefa é obrigatório.").max(100, "O nome precisa ter menos de 60 caracteres"),
+    description: yup.string().required("A descrição é obrigatória.").max(150, "A descrição precisa ter menos de 40 caracteres"),
+    priority: yup.string().required("A prioridade é obrigatória."),
+    status: yup.string().required("O status da tarefa é obrigatório."),
+    dateLimit: yup.string().required("A data limite é obrigatória.")
 });
-
+ 
 function NewTask() {
     // Inicializa o Form e chama a validação
     const { register, handleSubmit, formState: { errors } } = useForm({
@@ -29,7 +29,7 @@ function NewTask() {
     });
     const [selectedStatus, setSelectedStatus] = useState('Pendente');
     const [selectedPriority, setSelectedPriority] = useState('Baixa');
-
+ 
     const createNewTask = (data) => {
         data.status = selectedStatus;
         data.priority = selectedPriority;
@@ -49,10 +49,10 @@ function NewTask() {
             })
             .catch((error) => {
                 console.error("Erro ao criar a tarefa:", error);
-                toast.error('Ocorreu um erro ao criar a tarefa. Tente novamente mais tarde.');
+                toast.error('Ocorreu um erro ao criar a tarefa. Verifique todos os campos.');
             });
     };
-
+ 
     return (
         <div>
             <Header />
@@ -68,7 +68,7 @@ function NewTask() {
                                 </div>
                                 <p className='error-message'>{errors.name?.message}</p>
                             </div>
-
+ 
                             <div className='card-task-description'>
                                 <div className="label-input">
                                     <label>Descrição</label><br />
@@ -76,7 +76,7 @@ function NewTask() {
                                 </div>
                                 <p className='error-message'>{errors.description?.message}</p>
                             </div>
-
+ 
                             <div className='card-task-details'>
                                 <div className="label-input">
                                     <label>Prioridade</label><br />
@@ -92,7 +92,7 @@ function NewTask() {
                                     </select>
                                     <p className='error-message'>{errors.priority?.message}</p>
                                 </div>
-
+ 
                                 <div className="label-input">
                                     <label>Data limite</label><br />
                                     <input
@@ -103,7 +103,7 @@ function NewTask() {
                                     />
                                     <p className='error-message'>{errors.dateLimit && errors.dateLimit.message}</p>
                                 </div>
-
+ 
                                 <div className="label-input">
                                     <label>Status</label><br />
                                     <select
@@ -119,7 +119,7 @@ function NewTask() {
                                     <p className='error-message'>{errors.status?.message}</p>
                                 </div>
                             </div>
-
+ 
                             <div className='btn-newTask'>
                                 <button type="submit">
                                     <img src="/icons/check.png" alt="Ícone" />
