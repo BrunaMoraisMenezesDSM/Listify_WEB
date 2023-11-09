@@ -1,0 +1,80 @@
+.cards-tasks-details {
+    width: 90%;
+    height: 70%;
+    margin: 0 auto;
+    border: 1px solid #D2C7FF;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #D2C7FF;
+    text-align: center;
+    font-family: 'Candara';
+    display: flex;
+    justify-content: center;
+}
+
+.card-task-item-details {
+    background-color: #f0f0f0;
+    padding-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 70%;
+    height: 85%;
+    margin-top: 20px;
+}
+
+.card-task-item-details header {
+    font-size: 30px;
+    font-weight: bold;
+    color: #1d0033;
+}
+
+.name-details {
+    margin-top: 25px;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.description-task-details,
+.priority-task-details,
+.datelimit-task-details,
+.status-task-details {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding-bottom: 2%;
+    margin-left: 60px;
+    width: 80%;
+}
+
+.status-task-details {
+    margin-bottom: 25px;
+}
+
+.btn-back {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.btn-back button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.btn-back a {
+    text-decoration: none;
+}
+
+.p-details {
+    font-size: 25px;
+    font-weight: bold;
+}

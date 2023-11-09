@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #D2C7FF;
+}
+
+/* EDIT E NEW */
+.card-newTask {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card-task-items {
+    margin: 20px 0;
+}
+
+h1[name='editTask'],
+h1[name='newTask'] {
+    padding-top: 0%;
+    font-family: 'Candara';
+    color: #1d0033;
+    font-weight: bold;
+}
+
+label {
+    font-weight: bold;
+    font-family: 'Candara';
+    color: #1d0033;
+    font-size: 20px;
+}
+
+.error-message {
+    color: red;
+}
+
+.card-task-priority select,
+.card-task-status select {
+    width: 100%;
+    padding: 5px;
+}
+
+.card-task-description text {
+    width: 500px;
+    height: 100px;
+}
+
+.card-task-description textarea {
+    width: 500px;
+    height: 100px;
+}
+
+.label-input textarea,
+.label-input input[type="text"] {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.card-task-priority,
+.card-task-dateLimit,
+.card-task-status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card-task-priority label,
+.card-task-dateLimit label,
+.card-task-status label {
+    width: 100px;
+    display: inline-block;
+    margin-right: 0px !important;
+    padding-left: 50px;
+}
+
+.card-task-priority label {
+    width: 100px;
+    margin-right: 0;
+}
+
+.card-task-dateLimit label {
+    width: 100px;
+    margin-right: 0;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+
+.card-task-priority select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.card-task-priority select,
+.card-task-dateLimit input,
+.card-task-status select {
+    width: 300px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.cards-tasks-details {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    border: 1px solid #D2C7FF;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #D2C7FF;
+    text-align: center;
+    font-family: 'Candara';
+    display: flex;
+    justify-content: center;
+}
+
+.label-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.label-input label {
+    width: 110px;
+    margin-right: 0px;
+    margin-left: 25px;
+}
+
+.label-input textarea,
+.label-input input[type="text"],
+.label-input select,
+.label-input input[type="date"] {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[name='dateLimit'] {
+    margin-left: '25px';
+    margin-right: '0px';
+    width: '110px'
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: #fff;
+    background-color: #FFA500;
+    border: 1px solid #FFA500;
+    border-radius: 4px;
+}
+
+.card-task-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.card-task-details .label-input {
+    flex: 1;
+}
+
+input[type="text"],
+textarea,
+select {
+    font-family: 'Candara';
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #1d0033;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: white;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #D2C7FF;
+}

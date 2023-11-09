@@ -1,0 +1,185 @@
+main header {
+    display: contents;
+}
+
+.btns {
+    display: flex;
+}
+
+.btn-newTask {
+    display: flex;
+    align-items: center;
+}
+
+.btn-newTask button {
+    background-color: #FFA500;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.btn-newTask button img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.task-frame {
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 22px;
+    padding: 10px;
+    margin-bottom: 10px !important;
+    background-color: #A591EF;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.task-frame .btns {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.task-frame:hover .btns {
+    display: flex;
+    align-items: center;
+}
+
+.btn-editTask button,
+.btn-detailsTask button,
+.btn-deleteTask button {
+    background-color: #A591EF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    padding: 10px 7px;
+    border-radius: 5px;
+    transition: 0.5s ease;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.card-task-item {
+    padding: 10px;
+}
+
+.task-frame .description-task p {
+    word-wrap: break-word;
+    width: 35ch;
+    margin: 0 auto;
+    font-family: 'Candara';
+    color: #333333;
+}
+
+.task-frame h2 {
+    font-family: 'Candara';
+    color: #1d0033;
+}
+
+.filter {
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 550px;
+}
+
+.filter label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.filter select {
+    padding: 5px;
+    border: none;
+    border-bottom: 2px solid #1d0033;
+    border-radius: 5px;
+    background-color: #D2C7FF;
+    color: #333;
+    width: 100px;
+    appearance: none;
+    cursor: pointer;
+    font-family: 'Candara';
+    font-size: 16px;
+}
+
+.filter select:focus {
+    outline: none;
+    box-shadow: 0 0 1px #FFA500;
+}
+
+.filter select option {
+    background-color: #ffffff;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.filter select option:hover {
+    background-color: #3f2b07;
+    color: black;
+}
+
+.spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.spinner-circle {
+    width: 90px;
+    height: 90px;
+    border: 2px solid transparent;
+    border-top-color: #FFA500;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.custom-btn {
+    background-color: #FFA500;
+    color: #fff;
+    border: none;
+    border-radius: 8%;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.custom-btn.active {
+    background-color: #e9bd6c;
+    ;
+}
+
+.custom-btn[data-filter="in-progress"] {
+    width: 130px;
+    /* Largura personalizada */
+}

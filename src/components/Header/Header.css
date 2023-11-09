@@ -1,0 +1,51 @@
+.header-task {
+    background-color: #FFA500;
+    padding: 10px 0;
+}
+
+.container-task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.title {
+    text-align: center;
+    width: 100%;
+}
+
+.title h1 {
+    margin: 0;
+    font-family: 'Candara';
+    font-size: 60px;
+    color: white;
+    text-align: center;
+}
+
+.title h4 {
+    color: aliceblue;
+    font-weight: normal;
+    font-style: italic;
+    font-family: 'Candara';
+    font-size: small;
+    text-align: center;
+}
+
+.btn-back button {
+    background-color: #FFA500;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+.btn-back img {
+    cursor: pointer;
+    width: 20px;
+}
+
+.btn-back a {
+    text-decoration: none;
+}
